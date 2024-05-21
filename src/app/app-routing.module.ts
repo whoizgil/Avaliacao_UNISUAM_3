@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'cep',
+    loadChildren: () => import('./cep/cep.module').then( m => m.CepPageModule)
+  },
 ];
 
 @NgModule({
